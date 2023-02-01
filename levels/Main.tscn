@@ -1,9 +1,32 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://characters/cell/Cell.tscn" type="PackedScene" id=1]
+[ext_resource path="res://materials/water/Water.tscn" type="PackedScene" id=2]
 
 [node name="Main" type="Node"]
 
 [node name="Main2D" type="Node2D" parent="."]
 
 [node name="Cell" parent="Main2D" instance=ExtResource( 1 )]
+position = Vector2( 223, 149 )
+
+[node name="Water" parent="Main2D" instance=ExtResource( 2 )]
+position = Vector2( 326, 149 )
+
+[node name="Water2" parent="Main2D" instance=ExtResource( 2 )]
+position = Vector2( 372, 208 )
+
+[node name="Water3" parent="Main2D" instance=ExtResource( 2 )]
+position = Vector2( 352, 299 )
+
+[node name="Water4" parent="Main2D" instance=ExtResource( 2 )]
+position = Vector2( 522, 264 )
+
+[node name="Water5" parent="Main2D" instance=ExtResource( 2 )]
+position = Vector2( 544, 186 )
+
+[node name="Water6" parent="Main2D" instance=ExtResource( 2 )]
+position = Vector2( 571, 132 )
+
+[node name="Water7" parent="Main2D" instance=ExtResource( 2 )]
+position = Vector2( 611, 189 )

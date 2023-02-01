@@ -6,11 +6,11 @@ var capacity = 100
 var weight = 0
 
 var inventory = {
-	"water": 0,
-	"carbon": 0,
-	"potassium": 0,
-	"nitrogen": 0,
-	"phosphorus": 0,
+	"Water": 0,
+	"Carbon": 0,
+	"Potassium": 0,
+	"Nitrogen": 0,
+	"Phosphorus": 0,
 }
 
 
@@ -37,3 +37,13 @@ func _physics_process(delta: float):
 		
 	move_and_slide(velocity, Vector2.UP)
 	
+
+
+func _on_InteractArea_area_entered(area):
+	area.queue_free()
+	inventory[area.type] += 1
+	weight += area.weight
+
+
+	
+

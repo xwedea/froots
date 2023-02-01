@@ -1,7 +1,7 @@
 extends Node2D
 
-var weight : float = 10
-
+export var weight : float = 18
+export var type : String = "Water"
 
 func _ready():
 	pass
