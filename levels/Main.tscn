@@ -3,7 +3,7 @@
 [ext_resource path="res://characters/cell/Cell.tscn" type="PackedScene" id=1]
 [ext_resource path="res://materials/water/Water.tscn" type="PackedScene" id=2]
 [ext_resource path="res://misc/activation/ActivationArea.tscn" type="PackedScene" id=3]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://misc/HUD/HUD.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Node"]
 

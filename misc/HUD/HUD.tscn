@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Button.gd" type="Script" id=1]
+[ext_resource path="res://misc/HUD/Button.gd" type="Script" id=1]
+[ext_resource path="res://assets/HUD/menu.png" type="Texture" id=2]
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -10,18 +11,20 @@ anchor_bottom = 1.0
 margin_top = 1.0
 margin_bottom = 1.0
 mouse_filter = 2
-custom_constants/margin_right = 18
-custom_constants/margin_top = 18
-custom_constants/margin_left = 18
-custom_constants/margin_bottom = 18
+custom_constants/margin_right = 32
+custom_constants/margin_top = 32
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
 
 [node name="Button" type="Button" parent="MarginContainer"]
-margin_left = 994.0
-margin_top = 18.0
-margin_right = 1006.0
-margin_bottom = 38.0
+margin_left = 964.0
+margin_top = 32.0
+margin_right = 992.0
+margin_bottom = 54.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
+icon = ExtResource( 2 )
+icon_align = 1
 script = ExtResource( 1 )
 
 [node name="PopupPanel" type="PopupPanel" parent="MarginContainer/Button"]
