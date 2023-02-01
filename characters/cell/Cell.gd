@@ -22,6 +22,8 @@ func _process(delta: float):
 	
 
 func _physics_process(delta: float):
+	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
+	
 	velocity = Vector2.ZERO
 
 	if Input.is_action_pressed("go_up"):
@@ -32,7 +34,6 @@ func _physics_process(delta: float):
 		velocity.x = speed
 	if Input.is_action_pressed("go_left"):
 		velocity.x = -speed
-		
 	
 		
 	move_and_slide(velocity, Vector2.UP)
@@ -40,10 +41,6 @@ func _physics_process(delta: float):
 
 
 func _on_InteractArea_area_entered(area):
-	if area.is_in_group("activation"):
-		inventory["Water"] = 0
-		scale = Vector2(1, 1)
-		weight = 0
 	
 	if area.is_in_group("materials"):
 		var m_weight = area.weight
@@ -55,7 +52,6 @@ func _on_InteractArea_area_entered(area):
 		inventory[area.type] += 1
 		weight += m_weight
 		
-		scale += Vector2(m_weight/capacity, m_weight/capacity)
 	
 	
 
