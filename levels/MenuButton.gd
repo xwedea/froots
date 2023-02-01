@@ -2,7 +2,9 @@ extends MenuButton
 
 
 func _ready():
-	get_popup().hide_on_checkable_item_selection = false
+	get_popup().rect_global_position = Vector2(500,500)
+	get_popup().
+	
 	pass
 
 func _process(delta):
