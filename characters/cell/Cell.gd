@@ -40,9 +40,18 @@ func _physics_process(delta: float):
 
 
 func _on_InteractArea_area_entered(area):
+	var m_weight = area.weight
+	
+	if(weight+m_weight > capacity):
+		return
+
 	area.queue_free()
 	inventory[area.type] += 1
-	weight += area.weight
+	weight += m_weight
+	
+	scale += Vector2(m_weight/capacity, m_weight/capacity)
+	
+	
 
 
 	
