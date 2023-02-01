@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://characters/cell/Cell.tscn" type="PackedScene" id=1]
 [ext_resource path="res://materials/water/Water.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ActivationArea.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Node"]
 
@@ -30,3 +31,7 @@ position = Vector2( 571, 132 )
 
 [node name="Water7" parent="Main2D" instance=ExtResource( 2 )]
 position = Vector2( 611, 189 )
+
+[node name="ActivationArea" parent="Main2D" instance=ExtResource( 3 )]
+position = Vector2( 299, 69 )
+scale = Vector2( 3.76, 2.4 )

@@ -5,7 +5,7 @@ var velocity = Vector2.ZERO
 var capacity = 100
 var weight = 0
 
-var inventory = {
+export var inventory = {
 	"Water": 0,
 	"Carbon": 0,
 	"Potassium": 0,
@@ -40,16 +40,22 @@ func _physics_process(delta: float):
 
 
 func _on_InteractArea_area_entered(area):
-	var m_weight = area.weight
+	if area.is_in_group("activation"):
+		inventory["Water"] = 0
+		scale = Vector2(1, 1)
+		weight = 0
 	
-	if(weight+m_weight > capacity):
-		return
+	if area.is_in_group("materials"):
+		var m_weight = area.weight
+		
+		if(weight+m_weight > capacity):
+			return
 
-	area.queue_free()
-	inventory[area.type] += 1
-	weight += m_weight
-	
-	scale += Vector2(m_weight/capacity, m_weight/capacity)
+		area.queue_free()
+		inventory[area.type] += 1
+		weight += m_weight
+		
+		scale += Vector2(m_weight/capacity, m_weight/capacity)
 	
 	
 
