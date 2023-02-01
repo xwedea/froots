@@ -14,6 +14,10 @@ config/name="froots"
 run/main_scene="res://levels/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Water="*res://materials/water/Water.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
