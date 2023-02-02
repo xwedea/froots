@@ -36,7 +36,7 @@ margin_right = 57.0
 margin_bottom = 14.0
 rect_scale = Vector2( 0.3, 0.3 )
 custom_fonts/font = ExtResource( 3 )
-text = "Activate"
+text = "Drop"
 align = 1
 valign = 1
 

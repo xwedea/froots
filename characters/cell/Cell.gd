@@ -3,8 +3,8 @@ extends KinematicBody2D
 var speed = 300
 var velocity = Vector2.ZERO
 var capacity = 100
-var weight = 0
 
+export var weight = 0
 export var inventory = {
 	"Water": 0,
 	"Carbon": 0,
@@ -15,7 +15,14 @@ export var inventory = {
 
 
 func _ready():
-	pass
+	var ActivationAreas = get_tree().get_nodes_in_group("activation")
+	ActivationAreas[0].connect("drop_materials", self, "drop")
+
+
+func drop():
+	weight = 0
+	for key in inventory.keys():
+			inventory[key] = 0
 
 func _process(delta: float):
 	pass

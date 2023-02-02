@@ -12,7 +12,7 @@
 [node name="HUD" parent="Main2D" instance=ExtResource( 4 )]
 
 [node name="Cell" parent="Main2D" instance=ExtResource( 1 )]
-position = Vector2( 454, 152 )
+position = Vector2( 471, 140 )
 
 [node name="Water" parent="Main2D" instance=ExtResource( 2 )]
 position = Vector2( 303, 547 )
@@ -30,7 +30,10 @@ position = Vector2( 662, 556 )
 position = Vector2( 752, 558 )
 
 [node name="Water6" parent="Main2D" instance=ExtResource( 2 )]
-position = Vector2( 540, 154 )
+position = Vector2( 559, 140 )
+
+[node name="Water8" parent="Main2D" instance=ExtResource( 2 )]
+position = Vector2( 508, 139 )
 
 [node name="Water7" parent="Main2D" instance=ExtResource( 2 )]
 position = Vector2( 751, 481 )
