@@ -36,3 +36,7 @@ margin_left = -150.0
 margin_top = -250.0
 margin_right = 150.0
 margin_bottom = 250.0
+
+[node name="Requirements" type="Label" parent="MarginContainer/Button/PopupPanel"]
+margin_right = 40.0
+margin_bottom = 14.0
