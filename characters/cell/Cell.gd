@@ -5,6 +5,8 @@ var speed = 300
 var velocity = Vector2.ZERO
 var capacity = 1000
 
+signal material_collected
+
 export var weight = 0
 export var inventory = {
 	"Water": 0,
@@ -61,6 +63,8 @@ func _on_InteractArea_area_entered(area):
 		area.queue_free()
 		inventory[area.type] += 1
 		weight += m_weight
+		
+		emit_signal("material_collected")
 		
 	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
 	speed = MAX_SPEED - (weight / 3)
