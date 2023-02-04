@@ -5,7 +5,7 @@
 [ext_resource path="res://fonts/pixel_font.tres" type="DynamicFont" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 48, 32 )
+extents = Vector2( 16, 16 )
 
 [node name="ActivationArea" type="Area2D" groups=["activation"]]
 collision_mask = 0

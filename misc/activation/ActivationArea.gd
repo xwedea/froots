@@ -20,6 +20,7 @@ export var collected  = {
 	"Phosphorus": 0,
 }
 
+<<<<<<< HEAD
 var FinishTimer : Timer
 
 func _ready():
@@ -27,6 +28,12 @@ func _ready():
 	FinishTimer.one_shot = true
 
 	
+=======
+var Cell = null
+
+func _ready():
+	Cell = get_tree().get_nodes_in_group("player")[0]
+>>>>>>> d4209ccec0c3e3df1b20adb22608d677af7bd560
 	
 func _process(delta : float):
 	if FinishTimer.is_stopped() and FinishTimer.time_left != 0:
@@ -45,8 +52,15 @@ func _process(delta : float):
 		emit_signal("drop_materials")
 				
 		if isCompleted:
+<<<<<<< HEAD
 			FinishTimer.start()
 					
+=======
+			for key in collected.keys():
+				collected[key] = 0
+			emit_signal("completed")
+				
+>>>>>>> d4209ccec0c3e3df1b20adb22608d677af7bd560
 		
 		
 

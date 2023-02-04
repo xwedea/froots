@@ -6,6 +6,7 @@ var velocity = Vector2.ZERO
 var capacity = 300
 
 signal material_collected
+signal empty_inventory
 
 export var weight = 0
 export var inventory = {
@@ -14,7 +15,7 @@ export var inventory = {
 	"Nitrogen": 0,
 	"Phosphorus": 0,
 }
-
+onready var _animated_sprite = $AnimatedSprite
 
 func _ready():
 	var ActivationAreas = get_tree().get_nodes_in_group("activation")
@@ -25,6 +26,7 @@ func drop():
 	weight = 0
 	for key in inventory.keys():
 			inventory[key] = 0
+			emit_signal("empty_inventory")
 		
 	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
 	speed = MAX_SPEED - (weight / 3)
@@ -48,6 +50,11 @@ func _physics_process(delta: float):
 	if Input.is_action_pressed("go_left"):
 		velocity.x = -speed
 	
+	if(velocity == Vector2.ZERO):
+		_animated_sprite.play("move")
+	else:
+		_animated_sprite.play("idle")
+		
 		
 	move_and_slide(velocity, Vector2.UP)
 	
