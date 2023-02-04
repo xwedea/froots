@@ -16,4 +16,6 @@ script = ExtResource( 3 )
 position = Vector2( 464, 152 )
 
 [node name="ActivationArea" parent="Main2D" instance=ExtResource( 4 )]
-position = Vector2( 474, 86 )
+
+[node name="Timer" type="Timer" parent="." groups=["finish_timer"]]
+one_shot = true

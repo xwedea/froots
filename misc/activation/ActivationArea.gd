@@ -20,18 +20,21 @@ export var collected  = {
 	"Phosphorus": 0,
 }
 
-
+var FinishTimer : Timer
 
 func _ready():
-	pass
+	FinishTimer = Timer.new()
+	FinishTimer.one_shot = true
+
 	
 	
 func _process(delta : float):
-
+	if FinishTimer.is_stopped() and FinishTimer.time_left != 0:
+		emit_signal("completed")
 
 	if (requirements.Water <= collected.Water):
 		set_rotation(0.5)
-	
+
 
 	if isInside and Input.is_action_just_pressed("drop"):
 		var isCompleted = true
@@ -42,8 +45,8 @@ func _process(delta : float):
 		emit_signal("drop_materials")
 				
 		if isCompleted:
-			emit_signal("completed")
-				
+			FinishTimer.start()
+					
 		
 		
 
