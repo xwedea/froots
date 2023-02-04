@@ -17,10 +17,16 @@ export var inventory = {
 }
 onready var _animated_sprite = $AnimatedSprite
 
+var stateMachine 
+
 func _ready():
+	stateMachine = $AnimationTree.get("parameters/playback")
+	stateMachine.travel("idle")
+	
 	var ActivationAreas = get_tree().get_nodes_in_group("activation")
 	ActivationAreas[0].connect("drop_materials", self, "drop")
-
+	
+	
 
 func drop():
 	weight = 0
@@ -36,8 +42,7 @@ func _process(delta: float):
 	
 
 func _physics_process(delta: float):
-
-	
+	var current_state = stateMachine.get_current_node()
 	
 	velocity = Vector2.ZERO
 
@@ -49,16 +54,9 @@ func _physics_process(delta: float):
 		velocity.x = speed
 	if Input.is_action_pressed("go_left"):
 		velocity.x = -speed
-	
-	if(velocity == Vector2.ZERO):
-		_animated_sprite.play("move")
-	else:
-		_animated_sprite.play("idle")
-		
 		
 	move_and_slide(velocity, Vector2.UP)
 	
-
 
 func _on_InteractArea_area_entered(area):
 	if area.is_in_group("materials"):
@@ -73,6 +71,7 @@ func _on_InteractArea_area_entered(area):
 		
 		emit_signal("material_collected")
 		
+	stateMachine.travel("eat")
 	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
 	speed = MAX_SPEED - (weight / 3)
 	
