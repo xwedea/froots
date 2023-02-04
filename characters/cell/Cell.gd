@@ -3,7 +3,7 @@ extends KinematicBody2D
 var MAX_SPEED = 300
 var speed = 300
 var velocity = Vector2.ZERO
-var capacity = 1000
+var capacity = 300
 
 export var weight = 0
 export var inventory = {
