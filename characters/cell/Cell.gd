@@ -38,7 +38,7 @@ func drop():
 	speed = MAX_SPEED - (weight / 3)
 
 func _process(delta: float):
-	pass
+	rotation_degrees += 0.1
 	
 
 func _physics_process(delta: float):
