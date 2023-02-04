@@ -1,13 +1,13 @@
 extends KinematicBody2D
 
+var MAX_SPEED = 300
 var speed = 300
 var velocity = Vector2.ZERO
-var capacity = 100
+var capacity = 1000
 
 export var weight = 0
 export var inventory = {
 	"Water": 0,
-	"Carbon": 0,
 	"Potassium": 0,
 	"Nitrogen": 0,
 	"Phosphorus": 0,
@@ -23,13 +23,17 @@ func drop():
 	weight = 0
 	for key in inventory.keys():
 			inventory[key] = 0
+		
+	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
+	speed = MAX_SPEED - (weight / 3)
 
 func _process(delta: float):
 	pass
 	
 
 func _physics_process(delta: float):
-	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
+
+	
 	
 	velocity = Vector2.ZERO
 
@@ -48,7 +52,6 @@ func _physics_process(delta: float):
 
 
 func _on_InteractArea_area_entered(area):
-	
 	if area.is_in_group("materials"):
 		var m_weight = area.weight
 		
@@ -59,7 +62,8 @@ func _on_InteractArea_area_entered(area):
 		inventory[area.type] += 1
 		weight += m_weight
 		
-	
+	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
+	speed = MAX_SPEED - (weight / 3)
 	
 
 

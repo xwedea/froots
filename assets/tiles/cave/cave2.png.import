@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/activation.png-2f4d88b6945b5ac99a17ec749ab88805.stex"
+path="res://.import/cave2.png-2d84ad53e6eeb31f9164559c1c4d9fea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/activation/activation.png"
-dest_files=[ "res://.import/activation.png-2f4d88b6945b5ac99a17ec749ab88805.stex" ]
+source_file="res://assets/tiles/cave/cave2.png"
+dest_files=[ "res://.import/cave2.png-2d84ad53e6eeb31f9164559c1c4d9fea.stex" ]
 
 [params]
 

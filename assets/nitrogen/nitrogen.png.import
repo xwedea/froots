@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/activation.png-2f4d88b6945b5ac99a17ec749ab88805.stex"
+path="res://.import/nitrogen.png-335a12acfac7e403ae9a5c22a219ab0d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/activation/activation.png"
-dest_files=[ "res://.import/activation.png-2f4d88b6945b5ac99a17ec749ab88805.stex" ]
+source_file="res://assets/nitrogen/nitrogen.png"
+dest_files=[ "res://.import/nitrogen.png-335a12acfac7e403ae9a5c22a219ab0d.stex" ]
 
 [params]
 
