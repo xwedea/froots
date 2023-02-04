@@ -23,7 +23,6 @@ func _ready():
 	
 	
 func _process(delta : float):
-	print(collected.Water)
 	
 	if (requirements.Water <= collected.Water):
 		set_rotation(0.5)
