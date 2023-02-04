@@ -42,6 +42,8 @@ func _process(delta : float):
 		emit_signal("drop_materials")
 				
 		if isCompleted:
+			for key in collected.keys():
+				collected[key] = 0
 			emit_signal("completed")
 				
 		

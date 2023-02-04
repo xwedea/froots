@@ -5,6 +5,14 @@
 
 [node name="Level2" instance=ExtResource( 1 )]
 
+[node name="ActivationArea" parent="Main2D" index="2"]
+requirements = {
+"Nitrogen": 0,
+"Phosphorus": 0,
+"Potassium": 0,
+"Water": 2
+}
+
 [node name="Potassium" parent="Main2D" index="3" instance=ExtResource( 2 )]
 position = Vector2( 387, 206 )
 

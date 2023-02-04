@@ -6,6 +6,7 @@ var velocity = Vector2.ZERO
 var capacity = 300
 
 signal material_collected
+signal empty_inventory
 
 export var weight = 0
 export var inventory = {
@@ -25,6 +26,7 @@ func drop():
 	weight = 0
 	for key in inventory.keys():
 			inventory[key] = 0
+			emit_signal("empty_inventory")
 		
 	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
 	speed = MAX_SPEED - (weight / 3)
