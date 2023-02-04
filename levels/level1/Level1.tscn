@@ -13,7 +13,7 @@ requirements = {
 "Nitrogen": 0,
 "Phosphorus": 0,
 "Potassium": 0,
-"Water": 0
+"Water": 1
 }
 
 [node name="Materials" type="Node2D" parent="Main2D" index="3"]

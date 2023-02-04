@@ -1,4 +1,4 @@
-extends Node
+extends "res://levels/BaseLevel/BaseLevel.gd"
 
 
 

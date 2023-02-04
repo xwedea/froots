@@ -2,6 +2,7 @@ extends Area2D
 
 var isInside : bool = false
 
+
 signal drop_materials
 signal completed
 
@@ -19,20 +20,15 @@ export var collected  = {
 	"Phosphorus": 0,
 }
 
-var FinishTimer : Timer
+
 
 func _ready():
-	FinishTimer = get_node("Timer")
-
+	pass
 	
 	
 func _process(delta : float):
-	
-	if FinishTimer.is_stopped():
-		
-	
-		emit_signal("completed")
-	
+
+
 	if (requirements.Water <= collected.Water):
 		set_rotation(0.5)
 	
@@ -46,7 +42,7 @@ func _process(delta : float):
 		emit_signal("drop_materials")
 				
 		if isCompleted:
-			$FinishTimer.start()
+			emit_signal("completed")
 				
 		
 		
