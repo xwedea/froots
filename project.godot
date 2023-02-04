@@ -17,7 +17,6 @@ config/icon="res://icon.png"
 [autoload]
 
 Water="*res://materials/water/Water.gd"
-Cell="*res://characters/cell/Cell.gd"
 ActivationArea="*res://misc/activation/ActivationArea.gd"
 
 [gui]

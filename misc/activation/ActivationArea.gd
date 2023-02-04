@@ -20,11 +20,10 @@ export var collected  = {
 	"Phosphorus": 0,
 }
 
-
+var Cell = null
 
 func _ready():
-	pass
-	
+	Cell = get_tree().get_nodes_in_group("player")[0]
 	
 func _process(delta : float):
 

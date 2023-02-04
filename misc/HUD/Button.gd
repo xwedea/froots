@@ -1,15 +1,16 @@
 extends Button
 
 var ActivationAreas : Array
-
+var Cell = null
 func _ready():
+	Cell = get_tree().get_nodes_in_group("player")[0]
 	connect("pressed", self, "_button_pressed")
 	ActivationAreas = get_tree().get_nodes_in_group("activation")
 	ActivationAreas[0].connect("drop_materials", self, "drop")
 	ActivationAreas[0].connect("completed", self, "level_complete")
-	var Players = get_tree().get_nodes_in_group("player")
-	Players[0].connect("material_collected", self, "update_inventory")
-	Players[0].connect("empty_inventory", self, "update_inventory")
+	
+	Cell.connect("material_collected", self, "update_inventory")
+	Cell.connect("empty_inventory", self, "update_inventory")
 	
 	
 # updateReqs, updateInv boolean

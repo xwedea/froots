@@ -15,7 +15,7 @@ export var inventory = {
 	"Nitrogen": 0,
 	"Phosphorus": 0,
 }
-
+onready var _animated_sprite = $AnimatedSprite
 
 func _ready():
 	var ActivationAreas = get_tree().get_nodes_in_group("activation")
@@ -50,6 +50,11 @@ func _physics_process(delta: float):
 	if Input.is_action_pressed("go_left"):
 		velocity.x = -speed
 	
+	if(velocity == Vector2.ZERO):
+		_animated_sprite.play("move")
+	else:
+		_animated_sprite.play("idle")
+		
 		
 	move_and_slide(velocity, Vector2.UP)
 	
