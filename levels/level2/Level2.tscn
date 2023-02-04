@@ -1,16 +1,18 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://levels/BaseLevel/BaseLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://materials/potassium/Potassium.tscn" type="PackedScene" id=2]
+[ext_resource path="res://levels/level2/Level2.gd" type="Script" id=3]
 
 [node name="Level2" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
 
 [node name="ActivationArea" parent="Main2D" index="2"]
 requirements = {
 "Nitrogen": 0,
 "Phosphorus": 0,
 "Potassium": 0,
-"Water": 2
+"Water": 0
 }
 
 [node name="Potassium" parent="Main2D" index="3" instance=ExtResource( 2 )]

@@ -14,11 +14,6 @@ config/name="froots"
 run/main_scene="res://levels/level1/Level1.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-Water="*res://materials/water/Water.gd"
-ActivationArea="*res://misc/activation/ActivationArea.gd"
-
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

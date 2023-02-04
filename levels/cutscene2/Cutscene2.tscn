@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="Cutscene2" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 432.0
+margin_top = 227.0
+margin_right = 559.0
+margin_bottom = 241.0
+text = "CUTSCENE 2 - FINAL"
+
+[node name="Timer" type="Timer" parent="."]

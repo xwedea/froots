@@ -9,5 +9,4 @@ func _ready():
 	
 	
 func level_complete():
-	get_tree().change_scene("res://levels/cutscene1/Cutscene1.tscn")
-
+	get_tree().change_scene("res://levels/cutscene2/Cutscene2.tscn")

@@ -2,7 +2,6 @@ extends Area2D
 
 var isInside : bool = false
 
-
 signal drop_materials
 signal completed
 
@@ -21,20 +20,13 @@ export var collected  = {
 }
 
 
-var FinishTimer : Timer
 var Cell = null
 
 func _ready():
-	FinishTimer = Timer.new()
-	FinishTimer.one_shot = true
-	
 	Cell = get_tree().get_nodes_in_group("player")[0]
 
 
 func _process(delta : float):
-	if FinishTimer.is_stopped() and FinishTimer.time_left != 0:
-		emit_signal("completed")
-
 	if (requirements.Water <= collected.Water):
 		set_rotation(0.5)
 
@@ -47,16 +39,10 @@ func _process(delta : float):
 				isCompleted = false
 		emit_signal("drop_materials")
 				
-		if isCompleted:
-			for key in collected.keys():
-					collected[key] = 0
-					
-			emit_signal("completed")
-			FinishTimer.start()
+		if isCompleted:				
+			$FinishTimer.start()
 		
 		
-
-
 
 func _on_ActivationArea_body_entered(body):
 	isInside = true
@@ -67,3 +53,8 @@ func _on_ActivationArea_body_exited(body):
 	isInside = false
 	$Panel.visible = false
 
+
+func _on_FinishTimer_timeout():
+	for key in collected.keys():
+		collected[key] = 0
+	emit_signal("completed")

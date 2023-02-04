@@ -18,7 +18,7 @@ func _ready():
 func update_ui(updateReqs, updateInv):
 	var reqs = ""
 	var inventory = ""
-	for key in ActivationArea.requirements.keys():
+	for key in ActivationAreas[0].requirements.keys():
 		reqs += key + ": " + str(ActivationAreas[0].collected[key]) + "/" + str(ActivationAreas[0].requirements[key]) + "\n"
 		inventory += key + ": " + str(Cell.inventory[key]) + "\n"
 	
