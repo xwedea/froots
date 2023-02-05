@@ -43,7 +43,7 @@ func _process(delta: float):
 
 func _physics_process(delta: float):
 	if($SlowTimer.is_stopped()):
-		speed = 300
+		speed = MAX_SPEED - (weight / 3)
 
 	var current_state = stateMachine.get_current_node()
 	
@@ -74,13 +74,14 @@ func _on_InteractArea_area_entered(area):
 		
 		emit_signal("material_collected")
 		
-	stateMachine.travel("eat")
-	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
-	speed = MAX_SPEED - (weight / 3)
+		stateMachine.travel("eat")
+		scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
+		if($SlowTimer.is_stopped()):
+			speed = MAX_SPEED - (weight / 3)
 	
 	if area.is_in_group("parasite"):
 		$SlowTimer.start()
-		speed = 100
+		speed = MAX_SPEED/3
 		
 		
 
