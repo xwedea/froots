@@ -25,11 +25,11 @@ func update_ui(updateReqs, updateInv):
 		inventory += key + ": " + str(Cell.inventory[key]) + "\n"
 	
 	if(updateReqs):
-		$PopupPanel/GridContainer/Requirements.text = "REQUIREMENTS\n\n"
-		$PopupPanel/GridContainer/Requirements.text += reqs
+		$PopupPanel/Container/Requirements.text = "REQUIREMENTS\n\n"
+		$PopupPanel/Container/Requirements.text += reqs
 	if(updateInv):
-		$PopupPanel/GridContainer/Inventory.text = "INVENTORY\n\n"
-		$PopupPanel/GridContainer/Inventory.text += inventory
+		$PopupPanel/Container/Inventory.text = "INVENTORY\n\n"
+		$PopupPanel/Container/Inventory.text += inventory
 		
 
 func _process(delta):
