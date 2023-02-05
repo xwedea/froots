@@ -27,10 +27,6 @@ func _ready():
 
 
 func _process(delta : float):
-	if (requirements.Water <= collected.Water):
-		set_rotation(0.5)
-
-
 	if isInside and Input.is_action_just_pressed("drop"):
 		var isCompleted = true
 		for key in Cell.inventory.keys():

@@ -1,6 +1,15 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/cutscenes/Tree3.PNG" type="Texture" id=1]
+[ext_resource path="res://assets/cutscenes/Adam and Eve.PNG" type="Texture" id=2]
+[ext_resource path="res://levels/cutscene2/first.gd" type="Script" id=3]
+[ext_resource path="res://levels/cutscene2/Cutscene2.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "New Anim"
 
 [node name="Cutscene2" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 432.0
@@ -10,3 +19,21 @@ margin_bottom = 241.0
 text = "CUTSCENE 2 - FINAL"
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="second" type="Sprite" parent="."]
+position = Vector2( 512, 302 )
+scale = Vector2( 0.999776, 1.00631 )
+texture = ExtResource( 2 )
+
+[node name="first" type="Sprite" parent="."]
+position = Vector2( 512, 301 )
+scale = Vector2( 0.999332, 1.00371 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/New Anim" = SubResource( 1 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

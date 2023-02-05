@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://levels/cutscene1/Cutscene1.gd" type="Script" id=1]
+[ext_resource path="res://assets/cutscenes/Tree2.PNG" type="Texture" id=2]
 
 [node name="Cutscene1" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,6 +14,12 @@ margin_bottom = 248.0
 text = "CUTSCENE 1"
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
 autostart = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 304 )
+scale = Vector2( 0.997821, 1.015 )
+texture = ExtResource( 2 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
