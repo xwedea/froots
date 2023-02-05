@@ -77,8 +77,6 @@ func _on_InteractArea_area_entered(area):
 		stateMachine.travel("eat")
 		scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
 
-		speed = MAX_SPEED - (weight / 3)
-
 		if($SlowTimer.is_stopped()):
 			speed = MAX_SPEED - (weight / 3)
 

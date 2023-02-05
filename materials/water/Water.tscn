@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://materials/material/Material.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/water/water.png" type="Texture" id=2]
 [ext_resource path="res://materials/water/Water.gd" type="Script" id=3]
+[ext_resource path="res://assets/water/34a9f079-ebf2-4e8a-8cf1-87339ca000c5.png" type="Texture" id=5]
+[ext_resource path="res://assets/water/7062230f-3dbb-42b2-8905-495759fda33d.png" type="Texture" id=7]
+[ext_resource path="res://assets/water/34353610-747e-4ede-87a6-f5eddc41134f.png" type="Texture" id=12]
+[ext_resource path="res://assets/water/710e30f7-1f2c-49df-87a5-a8711159284c.png" type="Texture" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -18,3 +21,4 @@ script = ExtResource( 3 )
 [node name="Sprite" parent="." index="1"]
 position = Vector2( 0, -2 )
 frames = SubResource( 1 )
+playing = true
