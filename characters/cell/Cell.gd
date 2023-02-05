@@ -26,7 +26,6 @@ func _ready():
 	var ActivationAreas = get_tree().get_nodes_in_group("activation")
 	ActivationAreas[0].connect("drop_materials", self, "drop")
 	
-	
 
 func drop():
 	weight = 0
@@ -79,14 +78,11 @@ func _on_InteractArea_area_entered(area):
 
 		if($SlowTimer.is_stopped()):
 			speed = MAX_SPEED - (weight / 3)
-
-	
-	if area.is_in_group("parasite"):
+			
+	if area.is_in_group('parasite'):
 		$SlowTimer.start()
 		speed = MAX_SPEED/3
-		
-		
 
-
-	
-
+func _on_InteractArea_body_entered(body):
+	$SlowTimer.start()
+	speed = MAX_SPEED/3

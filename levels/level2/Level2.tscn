@@ -14,7 +14,7 @@ requirements = {
 "Nitrogen": 0,
 "Phosphorus": 0,
 "Potassium": 0,
-"Water": 0
+"Water": 1
 }
 
 [node name="Potassium" parent="Main2D" index="3" instance=ExtResource( 2 )]

@@ -145,3 +145,4 @@ wait_time = 4.95
 one_shot = true
 
 [connection signal="area_entered" from="InteractArea" to="." method="_on_InteractArea_area_entered"]
+[connection signal="body_entered" from="InteractArea" to="." method="_on_InteractArea_body_entered"]
