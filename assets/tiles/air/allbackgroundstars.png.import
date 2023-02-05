@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cave2.png-2d84ad53e6eeb31f9164559c1c4d9fea.stex"
+path="res://.import/allbackgroundstars.png-13b9c172f6f432bfc0f766f519317e25.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/cave/cave2.png"
-dest_files=[ "res://.import/cave2.png-2d84ad53e6eeb31f9164559c1c4d9fea.stex" ]
+source_file="res://assets/tiles/air/allbackgroundstars.png"
+dest_files=[ "res://.import/allbackgroundstars.png-13b9c172f6f432bfc0f766f519317e25.stex" ]
 
 [params]
 

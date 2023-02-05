@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tiles/background/BackgroundTilemap.tres" type="TileSet" id=1]
+
+[node name="BackgroundTilemap" type="TileMap"]
+z_index = -2
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 1024, 1920 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0, -65535, 1, 0, 0, 0, 0, 131072, 0, 0 )

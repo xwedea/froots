@@ -71,9 +71,9 @@ func _on_InteractArea_area_entered(area):
 		
 		emit_signal("material_collected")
 		
-	stateMachine.travel("eat")
-	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
-	speed = MAX_SPEED - (weight / 3)
+		stateMachine.travel("eat")
+		scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
+		speed = MAX_SPEED - (weight / 3)
 	
 
 
