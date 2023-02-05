@@ -140,4 +140,8 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 12 )
 
+[node name="SlowTimer" type="Timer" parent="."]
+wait_time = 4.95
+one_shot = true
+
 [connection signal="area_entered" from="InteractArea" to="." method="_on_InteractArea_area_entered"]

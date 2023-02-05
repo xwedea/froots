@@ -42,6 +42,9 @@ func _process(delta: float):
 	
 
 func _physics_process(delta: float):
+	if($SlowTimer.is_stopped()):
+		speed = 300
+
 	var current_state = stateMachine.get_current_node()
 	
 	velocity = Vector2.ZERO
@@ -76,7 +79,9 @@ func _on_InteractArea_area_entered(area):
 	speed = MAX_SPEED - (weight / 3)
 	
 	if area.is_in_group("parasite"):
-		print("entered")
+		$SlowTimer.start()
+		speed = 100
+		
 		
 
 
