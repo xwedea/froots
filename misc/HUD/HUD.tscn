@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://misc/HUD/Button.gd" type="Script" id=1]
 [ext_resource path="res://assets/HUD/menu.png" type="Texture" id=2]
+[ext_resource path="res://misc/Timer/Timer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://misc/Timer/Timesup.tscn" type="PackedScene" id=4]
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -11,16 +13,11 @@ anchor_bottom = 1.0
 margin_top = 1.0
 margin_bottom = 1.0
 mouse_filter = 2
-custom_constants/margin_right = 32
-custom_constants/margin_top = 32
-custom_constants/margin_left = 32
-custom_constants/margin_bottom = 32
 
 [node name="Button" type="Button" parent="MarginContainer"]
-margin_left = 964.0
-margin_top = 32.0
-margin_right = 992.0
-margin_bottom = 54.0
+margin_left = 996.0
+margin_right = 1024.0
+margin_bottom = 22.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 icon = ExtResource( 2 )
@@ -72,3 +69,14 @@ margin_right = 292.0
 margin_bottom = 328.0
 size_flags_horizontal = 3
 size_flags_vertical = 2
+
+[node name="Timer" parent="MarginContainer" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 14.0
+
+[node name="Timesup" parent="MarginContainer" groups=["time_panel"] instance=ExtResource( 4 )]
+visible = true
+margin_right = 1024.0
+margin_bottom = 600.0
