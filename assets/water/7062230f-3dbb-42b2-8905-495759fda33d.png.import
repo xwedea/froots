@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/7062230f-3dbb-42b2-8905-495759fda33d.png-217059b347278a7af27efdc5eec797fa.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/water/7062230f-3dbb-42b2-8905-495759fda33d.png"
+dest_files=[ "res://.import/7062230f-3dbb-42b2-8905-495759fda33d.png-217059b347278a7af27efdc5eec797fa.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

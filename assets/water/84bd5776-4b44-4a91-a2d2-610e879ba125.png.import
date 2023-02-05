@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/water.png-981c3217226a431eee03306fcfff24ce.stex"
+path="res://.import/84bd5776-4b44-4a91-a2d2-610e879ba125.png-28228d0c70131f6b70eef22e6dc4d9d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/water/water.png"
-dest_files=[ "res://.import/water.png-981c3217226a431eee03306fcfff24ce.stex" ]
+source_file="res://assets/water/84bd5776-4b44-4a91-a2d2-610e879ba125.png"
+dest_files=[ "res://.import/84bd5776-4b44-4a91-a2d2-610e879ba125.png-28228d0c70131f6b70eef22e6dc4d9d0.stex" ]
 
 [params]
 
