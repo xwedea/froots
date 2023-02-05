@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/2556b6d3-2576-4079-8ac0-6c6dbc9f21c7.png-b2b0810a6ee8a0c4af1457d6d9c82b92.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/nitrogen/2556b6d3-2576-4079-8ac0-6c6dbc9f21c7.png"
+dest_files=[ "res://.import/2556b6d3-2576-4079-8ac0-6c6dbc9f21c7.png-b2b0810a6ee8a0c4af1457d6d9c82b92.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

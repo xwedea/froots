@@ -1,8 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://materials/material/Material.tscn" type="PackedScene" id=1]
 [ext_resource path="res://materials/nitrogen/Nitrogen.gd" type="Script" id=2]
-[ext_resource path="res://assets/nitrogen/nitrogen.png" type="Texture" id=3]
+[ext_resource path="res://assets/nitrogen/1b77158d-c19b-40fc-a799-efdbd9621572.png" type="Texture" id=3]
+[ext_resource path="res://assets/nitrogen/2556b6d3-2576-4079-8ac0-6c6dbc9f21c7.png" type="Texture" id=4]
+[ext_resource path="res://assets/nitrogen/2b8c0b84-1678-4bd4-8014-67a0ad456a65.png" type="Texture" id=5]
+[ext_resource path="res://assets/nitrogen/19314473-2342-4402-8255-06597e16153f.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
 
 [node name="Nitrogen" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -11,6 +22,7 @@ script = ExtResource( 2 )
 position = Vector2( 0, -1 )
 
 [node name="Sprite" parent="." index="1"]
-position = Vector2( 2, 3 )
 scale = Vector2( 1.21875, 1.21875 )
-texture = ExtResource( 3 )
+frames = SubResource( 1 )
+frame = 2
+playing = true
