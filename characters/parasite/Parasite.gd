@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
-var speed = 50
+export var direction = Vector2.RIGHT;
+
+var speed = 75
 var velocity = Vector2.ZERO
-var direction = Vector2.ZERO
 
 func _ready():
 	rotate(1.5708)
-	direction = Vector2.RIGHT
 	$TurnDetector.connect("area_entered", self, "turn_entered")
 	
 func _physics_process(delta):
