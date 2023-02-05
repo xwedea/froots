@@ -1,20 +1,22 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://misc/HUD/Button.gd" type="Script" id=1]
 [ext_resource path="res://fonts/pixel_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://misc/Timer/Timer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://misc/Timer/Timesup.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/HUD/finalguide.png" type="Texture" id=5]
+[ext_resource path="res://misc/HUD/Capacity.gd" type="Script" id=6]
 
 [node name="HUD" type="CanvasLayer"]
 
 [node name="Button" type="Button" parent="."]
-margin_left = 987.0
-margin_top = 1.0
-margin_right = 1024.0
-margin_bottom = 21.0
+margin_left = 963.0
+margin_top = 18.0
+margin_right = 1007.0
+margin_bottom = 40.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
+custom_fonts/font = ExtResource( 2 )
 text = "TAB"
 icon_align = 1
 script = ExtResource( 1 )
@@ -28,13 +30,13 @@ anchor_bottom = 0.5
 margin_left = -155.0
 margin_top = -266.0
 margin_right = 145.0
-margin_bottom = 174.0
+margin_bottom = 194.0
 
 [node name="Container" type="Container" parent="Button/PopupPanel"]
 margin_left = 4.0
 margin_top = 4.0
 margin_right = 296.0
-margin_bottom = 436.0
+margin_bottom = 456.0
 
 [node name="Requirements" type="Label" parent="Button/PopupPanel/Container"]
 margin_left = 85.0
@@ -61,7 +63,7 @@ texture = ExtResource( 5 )
 margin_left = 4.0
 margin_top = 4.0
 margin_right = 296.0
-margin_bottom = 436.0
+margin_bottom = 456.0
 size_flags_horizontal = 3
 size_flags_vertical = 2
 
@@ -70,6 +72,13 @@ wait_time = 3.0
 one_shot = true
 autostart = true
 
+[node name="Timer" parent="." instance=ExtResource( 3 )]
+margin_left = 15.0
+margin_top = 16.0
+margin_right = 15.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 2 )
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -77,14 +86,16 @@ margin_top = 1.0
 margin_bottom = 1.0
 mouse_filter = 2
 
-[node name="Timer" parent="MarginContainer" instance=ExtResource( 3 )]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 0.0
-margin_bottom = 14.0
-
 [node name="Timesup" parent="MarginContainer" groups=["time_panel"] instance=ExtResource( 4 )]
 margin_right = 1024.0
 margin_bottom = 600.0
+
+[node name="Capacity" type="Label" parent="."]
+margin_left = 17.0
+margin_top = 566.0
+margin_right = 57.0
+margin_bottom = 582.0
+custom_fonts/font = ExtResource( 2 )
+script = ExtResource( 6 )
 
 [connection signal="timeout" from="Button/Timer" to="Button" method="_on_Timer_timeout"]

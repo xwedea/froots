@@ -15,58 +15,55 @@ script = ExtResource( 2 )
 
 [node name="ActivationArea" parent="Main2D" index="2"]
 requirements = {
-"Nitrogen": 3,
-"Phosphorus": 2,
+"Nitrogen": 2,
+"Phosphorus": 3,
 "Potassium": 1,
 "Water": 4
 }
 
-[node name="Potassium2" parent="Main2D/Materials" index="4" instance=ExtResource( 6 )]
-position = Vector2( 1614, 1985 )
+[node name="Potassium" parent="Main2D/Materials" index="1"]
+position = Vector2( 740, 1088 )
 
-[node name="Potassium3" parent="Main2D/Materials" index="5" instance=ExtResource( 6 )]
+[node name="Potassium3" parent="Main2D/Materials" index="4" instance=ExtResource( 6 )]
 position = Vector2( 1728, 1977 )
 
-[node name="Potassium4" parent="Main2D/Materials" index="6" instance=ExtResource( 6 )]
+[node name="Potassium4" parent="Main2D/Materials" index="5" instance=ExtResource( 6 )]
 position = Vector2( 1826, 1978 )
 
-[node name="Potassium5" parent="Main2D/Materials" index="7" instance=ExtResource( 6 )]
+[node name="Potassium5" parent="Main2D/Materials" index="6" instance=ExtResource( 6 )]
 position = Vector2( 1770, 2086 )
 
-[node name="Nitrogen2" parent="Main2D/Materials" index="8" instance=ExtResource( 7 )]
-position = Vector2( 788, 2339 )
-
-[node name="Nitrogen3" parent="Main2D/Materials" index="9" instance=ExtResource( 7 )]
+[node name="Nitrogen3" parent="Main2D/Materials" index="7" instance=ExtResource( 7 )]
 position = Vector2( 894, 2315 )
 
-[node name="Nitrogen4" parent="Main2D/Materials" index="10" instance=ExtResource( 7 )]
+[node name="Nitrogen4" parent="Main2D/Materials" index="8" instance=ExtResource( 7 )]
 position = Vector2( 984, 2337 )
 
-[node name="Nitrogen5" parent="Main2D/Materials" index="11" instance=ExtResource( 7 )]
+[node name="Nitrogen5" parent="Main2D/Materials" index="9" instance=ExtResource( 7 )]
 position = Vector2( 805, 2209 )
 
-[node name="Water2" parent="Main2D/Materials" index="12" instance=ExtResource( 9 )]
+[node name="Water2" parent="Main2D/Materials" index="10" instance=ExtResource( 9 )]
 position = Vector2( 355, 1877 )
 
-[node name="Water3" parent="Main2D/Materials" index="13" instance=ExtResource( 9 )]
+[node name="Water3" parent="Main2D/Materials" index="11" instance=ExtResource( 9 )]
 position = Vector2( 471, 1871 )
 
-[node name="Water4" parent="Main2D/Materials" index="14" instance=ExtResource( 9 )]
+[node name="Water4" parent="Main2D/Materials" index="12" instance=ExtResource( 9 )]
 position = Vector2( 459, 1958 )
 
-[node name="Water5" parent="Main2D/Materials" index="15" instance=ExtResource( 9 )]
+[node name="Water5" parent="Main2D/Materials" index="13" instance=ExtResource( 9 )]
 position = Vector2( 569, 1883 )
 
-[node name="Phosphorus2" parent="Main2D/Materials" index="16" instance=ExtResource( 8 )]
+[node name="Phosphorus2" parent="Main2D/Materials" index="14" instance=ExtResource( 8 )]
 position = Vector2( -291, 1571 )
 
-[node name="Phosphorus3" parent="Main2D/Materials" index="17" instance=ExtResource( 8 )]
+[node name="Phosphorus3" parent="Main2D/Materials" index="15" instance=ExtResource( 8 )]
 position = Vector2( -313, 1681 )
 
-[node name="Phosphorus4" parent="Main2D/Materials" index="18" instance=ExtResource( 8 )]
+[node name="Phosphorus4" parent="Main2D/Materials" index="16" instance=ExtResource( 8 )]
 position = Vector2( -164, 1548 )
 
-[node name="Phosphorus5" parent="Main2D/Materials" index="19" instance=ExtResource( 8 )]
+[node name="Phosphorus5" parent="Main2D/Materials" index="17" instance=ExtResource( 8 )]
 position = Vector2( -246, 1654 )
 
 [node name="Parasite" parent="Main2D" index="4" instance=ExtResource( 5 )]

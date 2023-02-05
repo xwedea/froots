@@ -3,7 +3,7 @@ extends KinematicBody2D
 var MAX_SPEED = 300
 var speed = 300
 var velocity = Vector2.ZERO
-var capacity = 300
+var capacity = 200
 
 signal material_collected
 signal empty_inventory
@@ -33,7 +33,7 @@ func drop():
 			inventory[key] = 0
 			emit_signal("empty_inventory")
 		
-	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
+	scale = Vector2(1 + weight/(capacity+200), 1 + weight/(capacity+200))
 	speed = MAX_SPEED - (weight / 3)
 
 func _process(delta: float):
@@ -74,15 +74,17 @@ func _on_InteractArea_area_entered(area):
 		emit_signal("material_collected")
 		
 		stateMachine.travel("eat")
-		scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
+		scale = Vector2(1 + weight/(capacity+200), 1 + weight/(capacity+200))
 
 		if($SlowTimer.is_stopped()):
 			speed = MAX_SPEED - (weight / 3)
 			
 	if area.is_in_group('parasite'):
+		area.queue_free()
 		$SlowTimer.start()
 		speed = MAX_SPEED/3
 
 func _on_InteractArea_body_entered(body):
+	body.queue_free()
 	$SlowTimer.start()
 	speed = MAX_SPEED/3

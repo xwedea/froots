@@ -56,3 +56,7 @@ func level_complete():
 
 func _on_Timer_timeout():
 	$PopupPanel.visible = false
+
+
+func _on_MenuButton_pressed():
+	get_tree().change_scene("res://levels/main_menu/MainMenu.tscn")
