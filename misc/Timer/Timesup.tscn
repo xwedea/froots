@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://misc/Timer/Button.gd" type="Script" id=1]
 
 [node name="Timesup" type="PopupPanel"]
 
@@ -22,3 +24,4 @@ margin_right = 62.0
 margin_bottom = 38.0
 size_flags_horizontal = 4
 text = "RETRY"
+script = ExtResource( 1 )

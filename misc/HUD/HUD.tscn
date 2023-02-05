@@ -77,6 +77,5 @@ margin_right = 0.0
 margin_bottom = 14.0
 
 [node name="Timesup" parent="MarginContainer" groups=["time_panel"] instance=ExtResource( 4 )]
-visible = true
 margin_right = 1024.0
 margin_bottom = 600.0
