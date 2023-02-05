@@ -6,3 +6,7 @@ func _ready():
 	
 func _button_pressed():
 	get_tree().change_scene("res://levels/cutscene0/Cutscene0.tscn")
+
+
+func _on_Exit_pressed():
+	get_tree().quit()

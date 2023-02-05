@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/black.png" type="Texture" id=1]
+[ext_resource path="res://assets/cutscenes/black.png" type="Texture" id=1]
 [ext_resource path="res://fonts/pixel_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://levels/cutscene3/Button.gd" type="Script" id=3]
 
 [node name="Node2D" type="Node2D"]
 
@@ -17,10 +18,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 98.0
-margin_top = 222.0
-margin_right = 162.0
-margin_bottom = 238.0
+margin_left = 24.0
+margin_top = 216.0
+margin_right = 98.0
+margin_bottom = 232.0
 rect_scale = Vector2( 13.3231, 11.1246 )
 custom_fonts/font = ExtResource( 2 )
-text = "The End"
+text = "The Start"
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 496.0
+margin_top = 488.0
+margin_right = 531.0
+margin_bottom = 508.0
+text = "Exit"
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

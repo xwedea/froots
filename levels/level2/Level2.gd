@@ -1,4 +1,4 @@
-extends "res://levels/BaseLevel/BaseLevel.gd"
+extends "res://levels/base_level/BaseLevel.gd"
 
 
 

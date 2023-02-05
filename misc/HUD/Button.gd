@@ -55,4 +55,4 @@ func level_complete():
 
 
 func _on_Timer_timeout():
-	_button_pressed()
+	$PopupPanel.visible = false
