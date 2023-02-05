@@ -12,6 +12,8 @@ func _ready():
 	Cell.connect("material_collected", self, "update_inventory")
 	Cell.connect("empty_inventory", self, "update_inventory")
 	
+	_button_pressed()
+	
 	
 # updateReqs, updateInv boolean
 # true for updating
@@ -50,3 +52,7 @@ func update_inventory():
 func level_complete():
 	update_ui(true,true)
 	
+
+
+func _on_Timer_timeout():
+	_button_pressed()
