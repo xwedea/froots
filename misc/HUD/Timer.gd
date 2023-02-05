@@ -1,6 +1,6 @@
 extends Label
 
-var time_left = 3
+var time_left = 120
 
 signal times_up
 
