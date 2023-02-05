@@ -17,7 +17,7 @@ margin_left = 470.0
 margin_top = 514.0
 margin_right = 553.0
 margin_bottom = 534.0
-text = "Main Menu"
+text = "MAIN MENU"
 script = ExtResource( 2 )
 
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_Button_pressed"]
