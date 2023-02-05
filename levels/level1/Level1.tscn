@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://levels/BaseLevel/BaseLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://materials/potassium/Potassium.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/level1/Level1.gd" type="Script" id=3]
 [ext_resource path="res://materials/water/Water.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/parasite/Parasite.tscn" type="PackedScene" id=5]
 
 [node name="Level1" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
@@ -39,6 +40,9 @@ position = Vector2( 607, 255 )
 
 [node name="Water4" parent="Main2D/Materials" index="6" instance=ExtResource( 4 )]
 position = Vector2( 573, 307 )
+
+[node name="Parasite" parent="Main2D" index="4" instance=ExtResource( 5 )]
+position = Vector2( 323, 153 )
 
 [node name="Label" type="Label" parent="." index="1"]
 margin_left = 456.0

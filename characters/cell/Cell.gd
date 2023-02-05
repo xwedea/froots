@@ -75,6 +75,9 @@ func _on_InteractArea_area_entered(area):
 	scale = Vector2(1 + weight/capacity, 1 + weight/capacity)
 	speed = MAX_SPEED - (weight / 3)
 	
+	if area.is_in_group("parasite"):
+		print("entered")
+		
 
 
 	

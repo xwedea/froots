@@ -1,7 +1,42 @@
-[gd_scene format=2]
+[gd_scene load_steps=16 format=2]
 
-[node name="Parasite" type="KinematicBody2D"]
+[ext_resource path="res://assets/parasite/0d5c4ce6-7d9e-408b-b81b-54605663c36d.png" type="Texture" id=1]
+[ext_resource path="res://assets/parasite/db192d20-56c7-4da3-a3b8-cf3d565f7859.png" type="Texture" id=2]
+[ext_resource path="res://assets/parasite/deef0e1f-822a-43f4-b34e-e3b2b2f012a9.png" type="Texture" id=3]
+[ext_resource path="res://assets/parasite/664b8c8c-2963-4b72-8b5a-aa07fb2e2979.png" type="Texture" id=4]
+[ext_resource path="res://assets/parasite/78b3f176-ba52-4859-b839-60f569759ac2.png" type="Texture" id=5]
+[ext_resource path="res://assets/parasite/8628fa68-6f8b-4b56-9c83-6847a0fd23c4.png" type="Texture" id=6]
+[ext_resource path="res://assets/parasite/62812d1b-9b1e-405a-958d-4e7bdc02039d.png" type="Texture" id=7]
+[ext_resource path="res://assets/parasite/948976e9-fb2a-4922-9732-cdfae6a981f5.png" type="Texture" id=8]
+[ext_resource path="res://assets/parasite/a1317343-0e95-4135-a4e8-06b23100b7ee.png" type="Texture" id=9]
+[ext_resource path="res://assets/parasite/c4eaed13-7f22-4721-a84d-1f2973ac78be.png" type="Texture" id=10]
+[ext_resource path="res://assets/parasite/fe3abfed-ec12-47a2-b8f2-2b2c96ef2135.png" type="Texture" id=11]
+[ext_resource path="res://assets/parasite/f63f92f0-a1f9-49fd-aad3-1144a2e46100.png" type="Texture" id=12]
+[ext_resource path="res://assets/parasite/2ccee1dc-4b18-4efb-8f51-88de9c525781.png" type="Texture" id=13]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 15.0
+height = 16.0
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="Parasite" type="Area2D" groups=["parasite"]]
+position = Vector2( -10, 2 )
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 7, -3 )
+shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -6, 0 )
+scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
