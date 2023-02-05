@@ -14,7 +14,7 @@
 script = ExtResource( 3 )
 
 [node name="ActivationArea" parent="Main2D" index="2"]
-position = Vector2( 415, -641 )
+position = Vector2( 481, -634 )
 requirements = {
 "Nitrogen": 3,
 "Phosphorus": 2,
