@@ -41,13 +41,15 @@ func _process(delta : float):
 		
 
 func _on_ActivationArea_body_entered(body):
-	isInside = true
-	$Panel.visible = true
+	if body.is_in_group("player"):
+		isInside = true
+		$Panel.visible = true
 
 
 func _on_ActivationArea_body_exited(body):
-	isInside = false
-	$Panel.visible = false
+	if body.is_in_group("player"):
+		isInside = false
+		$Panel.visible = false
 
 
 func _on_FinishTimer_timeout():
