@@ -41,7 +41,7 @@ position = Vector2( 263, 1099 )
 position = Vector2( 695, 1110 )
 
 [node name="Timer" type="Timer" parent="." groups=["finish_timer"]]
-wait_time = 5.0
+wait_time = 0.5
 one_shot = true
 
 [node name="BackgroundSprite" type="Sprite" parent="."]

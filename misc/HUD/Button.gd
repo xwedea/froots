@@ -25,11 +25,11 @@ func update_ui(updateReqs, updateInv):
 		inventory += key + ": " + str(Cell.inventory[key]) + "\n"
 	
 	if(updateReqs):
-		$PopupPanel/Requirements.text = "\nREQUIREMENTS\n\n"
-		$PopupPanel/Requirements.text += reqs
+		$PopupPanel/Control/Requirements.text = "\nREQUIREMENTS\n\n"
+		$PopupPanel/Control/Requirements.text += reqs
 	if(updateInv):
-		$PopupPanel/Inventory.text = "INVENTORY\n\n"
-		$PopupPanel/Inventory.text += inventory
+		$PopupPanel/Control/Inventory.text = "INVENTORY\n\n"
+		$PopupPanel/Control/Inventory.text += inventory
 		
 
 func _process(delta):
@@ -40,6 +40,7 @@ func _process(delta):
 		
 func _button_pressed():
 	update_ui(true,true)
+	release_focus()
 	$PopupPanel.visible = !$PopupPanel.visible
 
 
@@ -60,3 +61,7 @@ func _on_Timer_timeout():
 
 func _on_MenuButton_pressed():
 	get_tree().change_scene("res://levels/main_menu/MainMenu.tscn")
+
+
+func _on_RestartButton_pressed():
+	get_tree().change_scene("res://levels/cutscene0/Cutscene0.tscn")
