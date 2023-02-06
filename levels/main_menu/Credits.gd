@@ -1,7 +1,9 @@
-extends Button
+extends Node2D
 
 func _ready():
-	connect("pressed", self, "_button_pressed")
-	
-func _button_pressed():
-	get_tree().change_scene("res://levels/main_menu/Credits.tscn")
+	pass
+
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://levels/main_menu/MainMenu.tscn")

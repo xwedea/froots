@@ -30,13 +30,13 @@ anchor_bottom = 0.5
 margin_left = -155.0
 margin_top = -266.0
 margin_right = 145.0
-margin_bottom = 223.0
+margin_bottom = 266.0
 
 [node name="Control" type="Control" parent="Button/PopupPanel"]
 margin_left = 4.0
 margin_top = 4.0
 margin_right = 296.0
-margin_bottom = 485.0
+margin_bottom = 528.0
 size_flags_horizontal = 3
 size_flags_vertical = 2
 
@@ -72,13 +72,22 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -37.0
-margin_top = -35.0
+margin_top = -69.0
 margin_right = 54.0
-margin_bottom = -13.0
+margin_bottom = -47.0
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/font = ExtResource( 2 )
 text = "RESTART"
 icon_align = 1
+
+[node name="MenuButton" type="Button" parent="Button/PopupPanel/Control"]
+margin_left = 79.0
+margin_top = 490.0
+margin_right = 246.0
+margin_bottom = 512.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = ExtResource( 2 )
+text = "RETURN TO MENU"
 
 [node name="Timer" type="Timer" parent="Button"]
 wait_time = 6.0
@@ -114,4 +123,5 @@ custom_fonts/font = ExtResource( 2 )
 script = ExtResource( 6 )
 
 [connection signal="pressed" from="Button/PopupPanel/Control/RestartButton" to="Button" method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="Button/PopupPanel/Control/MenuButton" to="Button" method="_on_MenuButton_pressed"]
 [connection signal="timeout" from="Button/Timer" to="Button" method="_on_Timer_timeout"]

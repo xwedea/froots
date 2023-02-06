@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/main_screen/credits_page.png" type="Texture" id=1]
-[ext_resource path="res://levels/main_menu/Button.gd" type="Script" id=2]
+[ext_resource path="res://levels/main_menu/Credits.gd" type="Script" id=2]
 [ext_resource path="res://fonts/pixel_font.tres" type="DynamicFont" id=3]
 
 [node name="Credits" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -20,6 +21,5 @@ margin_right = 553.0
 margin_bottom = 534.0
 custom_fonts/font = ExtResource( 3 )
 text = "MAIN MENU"
-script = ExtResource( 2 )
 
-[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]

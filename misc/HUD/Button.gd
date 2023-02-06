@@ -1,5 +1,6 @@
 extends Button
 
+var pressedOnce = false
 var ActivationAreas : Array
 var Cell = null
 func _ready():
@@ -39,6 +40,7 @@ func _process(delta):
 		$PopupPanel.visible = !$PopupPanel.visible
 		
 func _button_pressed():
+	pressedOnce = true
 	update_ui(true,true)
 	release_focus()
 	$PopupPanel.visible = !$PopupPanel.visible
@@ -56,7 +58,8 @@ func level_complete():
 
 
 func _on_Timer_timeout():
-	$PopupPanel.visible = false
+	if !pressedOnce:
+		$PopupPanel.visible = false
 
 
 func _on_MenuButton_pressed():
