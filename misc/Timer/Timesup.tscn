@@ -1,29 +1,61 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://misc/Timer/Button.gd" type="Script" id=1]
 [ext_resource path="res://fonts/pixel_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://misc/Timer/Timesup.gd" type="Script" id=3]
 
 [node name="Timesup" type="PopupPanel"]
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 1025.0
+margin_bottom = 601.0
+script = ExtResource( 3 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 89.0
-margin_bottom = 44.0
-alignment = 1
+[node name="Control" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -509.0
+margin_top = -297.0
+margin_right = 509.0
+margin_bottom = 297.0
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-margin_right = 76.0
-margin_bottom = 14.0
+[node name="Label" type="Label" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -51.0
+margin_top = -9.0
+margin_right = 51.0
+margin_bottom = 7.0
 custom_fonts/font = ExtResource( 2 )
 text = "Time's UP!!!"
 align = 1
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-margin_left = 13.0
-margin_top = 18.0
-margin_right = 62.0
-margin_bottom = 38.0
+[node name="RetryButton" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.5
+margin_top = 30.0
+margin_right = 24.5
+margin_bottom = 10.0
 size_flags_horizontal = 4
 text = "RETRY"
-script = ExtResource( 1 )
+
+[node name="MenuButton" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.5
+margin_top = 60.0
+margin_right = 45.5
+margin_bottom = 10.0
+text = "MAIN MENU"
+icon_align = 1
+
+[connection signal="pressed" from="Control/RetryButton" to="." method="_on_RetryButton_pressed"]
+[connection signal="pressed" from="Control/MenuButton" to="." method="_on_MenuButton_pressed"]

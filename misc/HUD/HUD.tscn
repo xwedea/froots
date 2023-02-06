@@ -32,27 +32,28 @@ margin_top = -266.0
 margin_right = 145.0
 margin_bottom = 194.0
 
-[node name="Container" type="Container" parent="Button/PopupPanel"]
-margin_left = 4.0
+[node name="Requirements" type="Label" parent="Button/PopupPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -146.0
 margin_top = 4.0
-margin_right = 296.0
+margin_right = 146.0
 margin_bottom = 456.0
-
-[node name="Requirements" type="Label" parent="Button/PopupPanel/Container"]
-margin_left = 85.0
-margin_top = 10.0
-margin_bottom = 14.0
 size_flags_horizontal = 4
 custom_fonts/font = ExtResource( 2 )
 align = 1
 
-[node name="Inventory" type="Label" parent="Button/PopupPanel/Container"]
-margin_left = 85.0
-margin_top = 150.0
-margin_bottom = 214.0
+[node name="Inventory" type="Label" parent="Button/PopupPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -146.0
+margin_top = 4.0
+margin_right = 146.0
+margin_bottom = 456.0
 size_flags_horizontal = 4
 custom_fonts/font = ExtResource( 2 )
 align = 1
+valign = 1
 
 [node name="Sprite" type="Sprite" parent="Button/PopupPanel"]
 position = Vector2( 156.5, 372 )
@@ -87,10 +88,8 @@ margin_bottom = 1.0
 mouse_filter = 2
 
 [node name="Timesup" parent="MarginContainer" groups=["time_panel"] instance=ExtResource( 4 )]
-margin_right = 1024.0
-margin_bottom = 600.0
 
-[node name="Capacity" type="Label" parent="."]
+[node name="Capacity" type="Label" parent="." groups=["capacity_timer"]]
 margin_left = 17.0
 margin_top = 566.0
 margin_right = 57.0
