@@ -14,6 +14,7 @@ func _ready():
 	Cell.connect("empty_inventory", self, "update_inventory")
 	
 	_button_pressed()
+	pressedOnce = false
 	
 	
 # updateReqs, updateInv boolean
@@ -36,6 +37,7 @@ func update_ui(updateReqs, updateInv):
 func _process(delta):
 	
 	if(Input.is_action_just_pressed("menu")):
+		pressedOnce = true
 		update_ui(true,true)
 		$PopupPanel.visible = !$PopupPanel.visible
 		
